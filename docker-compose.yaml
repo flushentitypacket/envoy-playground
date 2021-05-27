@@ -1,0 +1,21 @@
+version: "3.7"
+services:
+
+  my-envoy:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # command: -l debug --config-path /etc/envoy/envoy.yaml
+    expose:
+      - "10000"
+    ports:
+      - "10000:10000"
+
+  nodeserv:
+    build:
+      context: .
+      dockerfile: Dockerfile.nodeserver
+    expose:
+      - "8080"
+    ports:
+      - "8080:8080"
