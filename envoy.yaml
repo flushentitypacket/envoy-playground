@@ -28,14 +28,14 @@ static_resources:
                         - match:
                             prefix: "/"
                           route:
-                            timeout: 15s
-                            idle_timeout: 1.5s
+                            # timeout: 15s
+                            idle_timeout: 15s
                             cluster: service_google
                             retry_policy:
                               retry_on: connect-failure,gateway-error,reset,unavailable,deadline-exceeded
                               retry_host_predicate:
                                 - name: envoy.retry_host_predicates.previous_hosts
-                              num_retries: 10
+                              num_retries: 2
                               per_try_timeout: 1s
                             hedge_policy:
                               hedge_on_per_try_timeout: true

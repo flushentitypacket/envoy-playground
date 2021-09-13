@@ -7,7 +7,7 @@ const snooze = ms => new Promise(resolve => setTimeout(resolve, ms));
 // reply to request with "Hello World!"
 app.get('/', async (req, res) => {
     console.log("Received")
-    await snooze(1500)
+    await snooze(10000)
     res.send('Hello World!')
     console.log("Responded")
 })
