@@ -7,15 +7,15 @@ services:
       dockerfile: Dockerfile
     # command: -l debug --config-path /etc/envoy/envoy.yaml
     expose:
-      - "10000"
+      - "10001"
     ports:
-      - "10000:10000"
+      - "10001:10001"
 
   nodeserv:
     build:
       context: .
       dockerfile: Dockerfile.nodeserver
     expose:
-      - "8080"
+      - "8081"
     ports:
-      - "8080:8080"
+      - "8081:8081"

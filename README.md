@@ -8,14 +8,14 @@ docker-compose build && docker-compose up
 Then you can start running requests against Envoy:
 
 ```
-curl localhost:10000
+curl localhost:10001
 Hello World!%
 ```
 
 Or against the server directly:
 
 ```
-curl localhost:8080
+curl localhost:8081
 Hello World!%
 ```
 
